@@ -1,5 +1,7 @@
 import fs from 'fs'
 import grayMatter from 'gray-matter'
+import { remark } from 'remark'
+import remarkHTML from 'remark-html'
 
 export function loadPosts() {
   const files = fs.readdirSync('_posts')
@@ -15,10 +17,26 @@ export function loadPosts() {
       date: Intl.DateTimeFormat('pt-BR', {
         dateStyle: 'long',
         timeZone: 'utc'
-      }).format(date),
-      content
+      }).format(date)
     }
   })
 
   return posts
+}
+
+export function getPostBySlug(slug: string) {
+  const file = fs.readFileSync(`_posts/${slug}.md`)
+  const { content, data } = grayMatter(file)
+  const { title, excerpt, date } = data
+  const { value: contentHTML } = remark().use(remarkHTML).processSync(content)
+
+  return {
+    title,
+    excerpt,
+    date: Intl.DateTimeFormat('pt-BR', {
+      dateStyle: 'long',
+      timeZone: 'utc'
+    }).format(date),
+    content: contentHTML
+  }
 }

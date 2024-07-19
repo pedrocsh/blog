@@ -1,0 +1,43 @@
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 80px 32px;
+}
+
+.header {
+  border-bottom: 1px solid #ddd;
+  padding: 32px 0;
+}
+
+.header strong {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.header h1 {
+  font-size: 48px;
+  margin: 8px 0;
+}
+
+.body {
+  padding: 32px 0;
+}
+
+.body h1,
+.body h2,
+.body h3 {
+  margin: 24px 0 8px;
+}
+
+.body h2 {
+  font-size: 20px;
+}
+
+.body h3 {
+  font-size: 16px;
+}
+
+.body p {
+  font-size: 16px;
+  margin: 8px 0;
+}
