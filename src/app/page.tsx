@@ -1,17 +1,19 @@
+import Link from 'next/link'
+import { loadPosts } from '../scripts/cache'
 import styles from '../styles/pages/home.module.css'
 
-const posts = [1, 2, 3, 4, 5]
-
 export default function Page() {
+  const posts = loadPosts()
+
   return (
     <div className={styles.posts}>
       {posts.map(post => (
-        <article key={post} className={styles.article}>
-          <strong>18 de julho de 2024</strong>
+        <article key={post.slug} className={styles.article}>
+          <strong>{post.date}</strong>
           <h1>
-            <a href="#">Laboriosam um expedita reiciendis</a>
+            <Link href={`/${post.slug}`}>{post.title}</Link>
           </h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit repudiandae voluptate sed doloremque perferendis eius dolor numquam eum dolorum velit necessitatibus, odio totam doloribus, provident, laborum ipsum ducimus enim molestias?</p>
+          <p>{post.excerpt}</p>
         </article>
       ))}
     </div>
