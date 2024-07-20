@@ -6,7 +6,7 @@ import remarkHTML from 'remark-html';
 export function loadPosts() {
   const files = fs.readdirSync('_posts');
   const posts = files.map(file => {
-    const fileContent = fs.readFileSync(join(__dirname, '..', '..', '..', '_posts', file), 'utf-8');
+    const fileContent = fs.readFileSync(join(process.cwd(), '_posts', file), 'utf-8');
     const { data } = grayMatter(fileContent);
     const { title, date } = data;
 

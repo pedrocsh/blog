@@ -60,4 +60,3 @@ Para muitos iniciantes, escrever seu primeiro programa "Hello, World!" é um mom
 ## Conclusão
 
 O "Hello, World!" pode parecer simples, mas sua importância na história da programação e na educação de novos programadores é inegável. Ele simboliza o início de uma jornada no mundo da programação e continua sendo uma tradição querida entre desenvolvedores de todo o mundo.
-
