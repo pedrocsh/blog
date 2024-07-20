@@ -15,6 +15,12 @@ export default function Post({ params }: Params) {
       <header className={styles.header}>
         <strong>{post.date}</strong>
         <h1>{post.title}</h1>
+        <div>
+          Escrito por{' '}
+            <a target="_blank" href={post.author.link}>
+              {post.author.name}
+            </a>
+        </div>
         <p>{post.excerpt}</p>
       </header>
 

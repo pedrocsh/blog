@@ -11,3 +11,7 @@
 .container > a {
   font-size: 16px;
 }
+
+.container > a:hover {
+  text-decoration: none;
+}
