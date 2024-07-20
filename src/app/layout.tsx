@@ -1,16 +1,16 @@
-import { Work_Sans } from 'next/font/google'
-import { Navbar } from '../components/navbar'
-import '../styles/global.css'
+import { Work_Sans } from 'next/font/google';
+import { Navbar } from '../components/navbar';
+import '../styles/global.css';
 
 const workSans = Work_Sans({
   subsets: ['latin'],
-  display: 'swap'
-})
+  display: 'swap',
+});
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="pt-BR" className={workSans.className}>
@@ -19,5 +19,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  )
+  );
 }

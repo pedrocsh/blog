@@ -1,9 +1,9 @@
-import Link from 'next/link'
-import { loadPosts } from '../scripts/cache'
-import styles from '../styles/pages/home.module.css'
+import Link from 'next/link';
+import { loadPosts } from '../scripts/cache';
+import styles from '../styles/pages/home.module.css';
 
 export default function Page() {
-  const posts = loadPosts()
+  const posts = loadPosts();
 
   return (
     <div className={styles.posts}>
@@ -13,9 +13,14 @@ export default function Page() {
           <h1>
             <Link href={`/${post.slug}`}>{post.title}</Link>
           </h1>
-          <header className={styles.header}>Escrito por <a target="_blank" href={post.author.link}>{post.author.name}</a></header>
+          <header className={styles.header}>
+            Escrito por{' '}
+            <a target="_blank" href={post.author.link}>
+              {post.author.name}
+            </a>
+          </header>
         </article>
       ))}
     </div>
-  )
+  );
 }

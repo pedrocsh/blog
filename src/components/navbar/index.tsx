@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import styles from '../../styles/components/navbar.module.css'
+import Link from 'next/link';
+import styles from '../../styles/components/navbar.module.css';
 
 export function Navbar() {
   return (
@@ -8,5 +8,5 @@ export function Navbar() {
         <Link href="/">pedroc.sh</Link>
       </div>
     </nav>
-  )
+  );
 }
