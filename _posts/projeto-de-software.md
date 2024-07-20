@@ -1,5 +1,5 @@
 ---
-title: Hello World
+title: Projeto de Software
 excerpt: Hello, World! é frequentemente o primeiro programa que novos programadores escrevem quando estão aprendendo uma nova linguagem de programação. Este simples exemplo tem uma longa história e é um marco na jornada de muitos desenvolvedores.
 date: 2024-07-15
 author: Pedro Cardoso

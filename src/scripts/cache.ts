@@ -14,6 +14,10 @@ export function loadPosts() {
       slug: file.replace('.md', ''),
       title,
       excerpt,
+      author: {
+        name: data.author,
+        link: data.authorLink
+      },
       date: Intl.DateTimeFormat('pt-BR', {
         dateStyle: 'long',
         timeZone: 'utc'

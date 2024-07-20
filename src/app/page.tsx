@@ -13,7 +13,7 @@ export default function Page() {
           <h1>
             <Link href={`/${post.slug}`}>{post.title}</Link>
           </h1>
-          <p>{post.excerpt}</p>
+          <header className={styles.header}>Escrito por <a target="_blank" href={post.author.link}>{post.author.name}</a></header>
         </article>
       ))}
     </div>
