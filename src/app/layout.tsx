@@ -1,8 +1,7 @@
-import { Work_Sans } from 'next/font/google';
-import { Navbar } from '../components/navbar';
-import '../styles/global.css';
+import { Inter } from 'next/font/google';
+import './styles/global.css';
 
-const workSans = Work_Sans({
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 });
@@ -13,11 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={workSans.className}>
-      <body>
-        <Navbar />
-        {children}
-      </body>
+    <html lang="pt-BR" className={inter.className}>
+      <body>{children}</body>
     </html>
   );
 }

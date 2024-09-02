@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header h1 {
+  font-size: 74px;
+  margin: 40px 24px;
+}
+
+.header p {
+  font-size: 18px;
+  margin: 24px;
+}
+
+.header strong {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 24px;
+}
+
+.header strong a {
+  font-weight: 500;
+}
+
+.header strong a:hover {
+  text-decoration: underline;
+}
+
+.header img {
+  margin: 80px 0 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .header h1 {
+    font-size: 32px;
+  }
+}

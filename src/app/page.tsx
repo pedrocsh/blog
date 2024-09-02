@@ -1,26 +1,15 @@
-import Link from 'next/link';
-import { loadPosts } from '../scripts/cache';
-import styles from '../styles/pages/home.module.css';
+import styles from './styles/page.module.css';
+import { getAllPosts } from '../lib/api';
+import { Article } from './components/article';
 
-export default function Page() {
-  const posts = loadPosts();
+export default function Home() {
+  const posts = getAllPosts();
 
   return (
-    <div className={styles.posts}>
+    <main className={styles.posts}>
       {posts.map(post => (
-        <article key={post.slug} className={styles.article}>
-          <strong>{post.date}</strong>
-          <h1>
-            <Link href={`/${post.slug}`}>{post.title}</Link>
-          </h1>
-          <header className={styles.header}>
-            Escrito por{' '}
-            <a target="_blank" href={post.author.link}>
-              {post.author.name}
-            </a>
-          </header>
-        </article>
+        <Article key={post.slug} {...post} />
       ))}
-    </div>
+    </main>
   );
 }
