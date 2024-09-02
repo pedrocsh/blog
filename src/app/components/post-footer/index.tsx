@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Author } from '../../../interfaces/author';
+import { Author } from '@interfaces/author';
 import styles from './styles.module.css';
 
 type PostFooterProps = {

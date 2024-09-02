@@ -1,7 +1,7 @@
 import styles from './styles/page.module.css';
-import { getAllPosts } from '../lib/api';
-import { Article } from './components/article';
-import { Navbar } from './components/navbar';
+import { getAllPosts } from '@lib/api';
+import { Article } from '@components/article';
+import { Navbar } from '@components/navbar';
 
 export default function Home() {
   const posts = getAllPosts();

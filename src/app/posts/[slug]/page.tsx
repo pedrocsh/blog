@@ -1,9 +1,9 @@
-import { getPostBySlug } from '../../../lib/api';
-import markdownToHtml from '../../../lib/markdown-to-html';
-import { PostBody } from '../../components/post-body';
-import { PostHeader } from '../../components/post-header';
-import { PostFooter } from '../../components/post-footer';
-import { Navbar } from '../../components/navbar';
+import { getPostBySlug } from '@lib/api';
+import markdownToHtml from '@lib/markdown-to-html';
+import { PostBody } from '@components/post-body';
+import { PostHeader } from '@components/post-header';
+import { PostFooter } from '@components/post-footer';
+import { Navbar } from '@components/navbar';
 
 type Params = {
   params: {

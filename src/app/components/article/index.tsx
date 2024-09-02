@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from './styles.module.css';
-import { type Author } from '../../../interfaces/author';
+import { type Author } from '@interfaces/author';
 
 type ArticleProps = {
   slug: string;
